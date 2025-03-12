@@ -1,0 +1,94 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+
+model Userinfo {
+  id          String @id @default(uuid())
+  name        String
+  email       String 
+  phone       String
+  countryCode String
+}
+
+model Demographics {
+  id        String  @id @default(uuid())
+  age       String
+  gender    String
+  heightFt  String
+  heightIn  String
+  weight    String
+  country   String
+  state     String
+  createdAt DateTime @default(now())   
+}
+
+model Healthinfo {
+    id                          Int      @id @default(autoincrement())
+    healthCondition             String
+    medication                  String
+    allergy                     String
+    dietaryPreference           String
+    familyMedicalHistory        String
+    supplement                  String
+    substance                   String
+    surgery                     String
+    nutritionalDeficiency       String
+    createdAt                   DateTime @default(now())
+    updatedAt                   DateTime @updatedAt
+}
+
+model Lifestyle {
+   id                    Int      @id @default(autoincrement())
+   activitylevel         String
+   dailyRoutine          String
+   averageSleep          String
+   stressLevel           String
+   digitalUsage          String
+   recreational          String
+  
+}
+
+model  DietaryPreference  {
+  id                     Int      @id @default(autoincrement())
+  dietaryFramework       String
+  preferredFoods         String
+  dislikedFoods          String
+  culturalRestrictions   String
+}
+
+model Nutritionaldeficiency {
+     id                    Int      @id @default(autoincrement())
+     weightManagement     String
+     nutrientTargets      String
+     healthGoals          String
+}
+
+model  Eatinghabits   {
+     id                     Int      @id @default(autoincrement())
+     eatingHabits         String
+     mealPreference       String
+     diningPreference     String
+}
+
+model Technicaldetails    {
+     id                     Int      @id @default(autoincrement())
+     foodPortions           String
+     cookingFacilities      String
+     kitchenAppliances      String
+     cookingSkills          String
+}
+
+
+
+
+
+
+//  npx prisma db push   this command is only used for when we insert the data into schema 
+// npx prisma studio  this command is only used for checking the schema on the localhost.
+//  npx prisma  migrate  dev this command is only used for the migate.
