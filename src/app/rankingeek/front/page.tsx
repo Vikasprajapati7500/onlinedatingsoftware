@@ -1387,7 +1387,7 @@ const Page = () => {
                   type="text"
                   placeholder="Search your diet plan"
                   className="w-full px-12 py-3 rounded-full text-black text-lg border-none shadow-lg outline-none transition focus:ring-4 focus:ring-green-400 cursor-pointer"
-                  onClick={() => router.push("/rankingeek/frontend")}
+                  onClick={() => router.push("/rankingeek/userinfo")}
                   readOnly
                 />
               </div>
