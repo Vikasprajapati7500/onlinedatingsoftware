@@ -4,7 +4,7 @@ import prisma from "../../../lib/prisma";
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
-) {
+) { 
   // Allow only POST requests.
   if (req.method !== "POST") {
     res.setHeader("Allow", ["POST"]);
