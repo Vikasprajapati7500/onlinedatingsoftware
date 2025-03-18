@@ -12,7 +12,7 @@ export default async function handler(
       .status(405)
       .json({ message: `Method ${req.method} not allowed` });
   }
-
+ 
   // Destructure the data from the request body using the same keys as sent by the client.
   const {
         weightManagement,
