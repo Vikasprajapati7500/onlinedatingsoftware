@@ -5,7 +5,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     res.setHeader("Allow", ["POST"]);
     return res.status(405).json({ error: "Method Not Allowed" });
   }
-
+ 
   const {
     signupAdmin,
     lifestyleData,
