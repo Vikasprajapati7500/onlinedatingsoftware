@@ -13,6 +13,7 @@ model Userinfo {
   name        String
   email       String 
   phone       String
+  password    String
   countryCode String
 }
 
@@ -25,6 +26,7 @@ model Demographics {
   weight    String
   country   String
   state     String
+  dob       String
   createdAt DateTime @default(now())   
 }
 

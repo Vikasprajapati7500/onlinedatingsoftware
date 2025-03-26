@@ -445,7 +445,7 @@ Basics Demographics: ${JSON.stringify(basicsdemographics, null, 2)}
 
   // Include the user data in the prompt
   const userPrompt = `Data: ${JSON.stringify(payload)}`;
-
+ 
   try {
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
