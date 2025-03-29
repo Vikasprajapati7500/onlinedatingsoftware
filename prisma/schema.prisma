@@ -10,12 +10,13 @@ generator client {
 
 model Userinfo {
   id          String @id @default(uuid())
-  name        String
-  email       String 
+  name        String 
+  email       String @unique
   phone       String
   password    String
   countryCode String
 }
+
 
 model Demographics {
   id        String  @id @default(uuid())

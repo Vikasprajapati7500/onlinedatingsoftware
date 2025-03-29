@@ -112,7 +112,7 @@ export default function DemographicForm() {
       });
 
       if (res.ok) {
-        router.push("/rankingeek/healthinfo");
+        router.push("/datingsoftware/healthinfo");
       } else {
         const result = await res.json();
         setError(result.message || "Something went wrong");
